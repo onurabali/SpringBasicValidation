@@ -24,7 +24,11 @@ public class Student {
     private String nameSurname;
     @NotBlank(message = "Must be not blank")
     private String schoolName;
-    @Email(message = "Email should be valid")
+
+    @NotBlank(message = "Must be write your deparment ")
+    @Size(min = 5)
+    private String department;
+
     private String email;
     @Min(value = 18, message = "cannot be younger 18")
     private int age;
